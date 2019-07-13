@@ -1,7 +1,20 @@
-<mat-toolbar color="primary">
-  <button class="menu-button" mat-icon-button><mat-icon svgIcon="i-menu-hamburger"></mat-icon></button>
-  {{title}}
-</mat-toolbar>
-<main>
-  <router-outlet></router-outlet>
-</main>
+<mat-sidenav-container class="app-container">
+  <mat-sidenav #appmenu>
+    <mat-toolbar>
+      <h2> Angular Todo App Menu </h2>
+    </mat-toolbar>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <mat-toolbar class="app-bar" color="primary">
+      <button class="menu-button" mat-icon-button (click)="appmenu.toggle()">
+        <mat-icon svgIcon="i-menu-hamburger"></mat-icon>
+      </button>
+      {{title}}
+    </mat-toolbar>
+    <main>
+      <router-outlet></router-outlet>
+    </main>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+

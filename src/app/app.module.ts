@@ -11,6 +11,7 @@ import {
   MatButtonModule,
   MatIconModule,
   MatIconRegistry,
+  MatSidenavModule,
   MatToolbarModule
 } from '@angular/material';
 
@@ -31,6 +32,7 @@ import {NgbTypeaheadModule} from '@ng-bootstrap/ng-bootstrap';
     AppRoutingModule,
     HttpClientModule,
     MatIconModule,
+    MatSidenavModule,
     MatButtonModule,
     MatToolbarModule,
     NgbTypeaheadModule
