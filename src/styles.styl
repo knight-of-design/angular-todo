@@ -1,6 +1,22 @@
-@import '~@angular/material/prebuilt-themes/indigo-pink.css'
 
-.mat-icon {
-  height: auto;
-  width: 32px;
-}
+icon-sizes = 16, 24, 32, 40, 48, 56, 64
+
+for icon-size in icon-sizes
+  .mat-icon.size-{icon-size}
+    height: (icon-size)px
+    width: (icon-size)px
+
+
+.mat-icon.inactive
+  color: hsla(0, 0, 0, 0.26);
+
+.mat-icon.dark
+  color: hsla(0, 0, 0, 0.54)
+  &.inactive
+    color: hsla(0, 0, 0, 0.26);
+
+.mat-icon.light
+  color: hsla(0, 0, 100%, 1)
+  &.inactive
+    color: hsla(0, 0, 100%, 0.3);
+

@@ -29,6 +29,7 @@
             ],
             "styles": [
               "src/styles.imports.sass",
+              "src/styles.imports.styl",
               "src/styles.styl"
             ],
             "scripts": []
