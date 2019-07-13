@@ -10,7 +10,7 @@
       <button class="menu-button" mat-icon-button (click)="appmenu.toggle()">
         <mat-icon svgIcon="i-menu-hamburger"></mat-icon>
       </button>
-      {{title}}
+      <a class="app-home-link" [routerLink]="['']"> {{title}}</a>
     </mat-toolbar>
     <main>
       <router-outlet></router-outlet>

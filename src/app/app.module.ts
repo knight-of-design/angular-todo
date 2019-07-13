@@ -5,12 +5,14 @@ import {
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
+
 import { HttpClientModule } from '@angular/common/http';
 
 import {
   MatButtonModule,
+  MatFormFieldModule,
   MatIconModule,
-  MatIconRegistry,
+  MatIconRegistry, MatInputModule,
   MatSidenavModule,
   MatToolbarModule
 } from '@angular/material';
@@ -19,12 +21,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LandingPageComponent } from './screens/landing-page/landing-page.component';
 import {NgbTypeaheadModule} from '@ng-bootstrap/ng-bootstrap';
+import { RegistrationComponent } from './screens/registration/registration.component';
+import {FormsModule} from '@angular/forms';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    LandingPageComponent
+    LandingPageComponent,
+    RegistrationComponent
   ],
   imports: [
     BrowserModule,
@@ -35,6 +40,9 @@ import {NgbTypeaheadModule} from '@ng-bootstrap/ng-bootstrap';
     MatSidenavModule,
     MatButtonModule,
     MatToolbarModule,
+    FormsModule,
+    MatFormFieldModule,
+    MatInputModule,
     NgbTypeaheadModule
   ],
   providers: [],
