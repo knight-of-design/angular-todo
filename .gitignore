@@ -9,7 +9,7 @@
 
 # dependencies
 /node_modules
-/assets/mdi.svg
+/src/assets/material
 
 # profiling files
 chrome-profiler-events.json
