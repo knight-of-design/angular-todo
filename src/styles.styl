@@ -8,15 +8,18 @@ for icon-size in icon-sizes
 
 
 .mat-icon.inactive
-  color: hsla(0, 0, 0, 0.26);
+  color: hsla(0, 0, 0, 0.26)
 
 .mat-icon.dark
   color: hsla(0, 0, 0, 0.54)
   &.inactive
-    color: hsla(0, 0, 0, 0.26);
+    color: hsla(0, 0, 0, 0.26)
 
 .mat-icon.light
   color: hsla(0, 0, 100%, 1)
   &.inactive
-    color: hsla(0, 0, 100%, 0.3);
+    color: hsla(0, 0, 100%, 0.3)
 
+.mat-icon-button .mat-button-wrapper
+  display: inline-flex
+  align-content: center
