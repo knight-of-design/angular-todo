@@ -3,9 +3,9 @@ import {
   DomSanitizer
 } from '@angular/platform-browser';
 
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
-import {HttpClientModule} from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 
 import {
   MatIconModule,
@@ -16,6 +16,7 @@ import {
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LandingPageComponent } from './screens/landing-page/landing-page.component';
+import {NgbTypeaheadModule} from '@ng-bootstrap/ng-bootstrap';
 
 
 @NgModule({
@@ -26,10 +27,11 @@ import { LandingPageComponent } from './screens/landing-page/landing-page.compon
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    AppRoutingModule,
     HttpClientModule,
     MatIconModule,
     MatToolbarModule,
-    AppRoutingModule
+    NgbTypeaheadModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -28,6 +28,7 @@
               "src/assets"
             ],
             "styles": [
+              "src/styles.imports.sass",
               "src/styles.styl"
             ],
             "scripts": []
