@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "install": "svg-icon build --source icons.conf.json --target src/assets --name material",
+    "install": "svg-icon build --source icons.conf.json --target src/assets --name i",
     "start": "ng serve",
     "build": "ng build",
     "test": "ng test",

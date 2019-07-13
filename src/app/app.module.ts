@@ -8,6 +8,7 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 
 import {
+  MatButtonModule,
   MatIconModule,
   MatIconRegistry,
   MatToolbarModule
@@ -30,6 +31,7 @@ import {NgbTypeaheadModule} from '@ng-bootstrap/ng-bootstrap';
     AppRoutingModule,
     HttpClientModule,
     MatIconModule,
+    MatButtonModule,
     MatToolbarModule,
     NgbTypeaheadModule
   ],
@@ -50,7 +52,7 @@ export class AppModule {
       return svg;
     };
 
-    matIconRegistry.addSvgIconSet(domSanitizer.bypassSecurityTrustResourceUrl('/assets/material/svg-symbols.svg'));
+    matIconRegistry.addSvgIconSet(domSanitizer.bypassSecurityTrustResourceUrl('/assets/i/svg-symbols.svg'));
   }
 }
 

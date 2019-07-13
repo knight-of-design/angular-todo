@@ -1,4 +1,5 @@
 {
   "arrow-tail-left": "material/arrow-back",
-  "arrow-tail-right": "material/arrow-forward"
+  "arrow-tail-right": "material/arrow-forward",
+  "menu-hamburger": "bootstrap/menu-hamburger"
 }
