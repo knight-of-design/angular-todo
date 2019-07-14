@@ -22,7 +22,7 @@ import { AppComponent } from './app.component';
 import { LandingPageComponent } from './screens/landing-page/landing-page.component';
 import {NgbTypeaheadModule} from '@ng-bootstrap/ng-bootstrap';
 import { RegistrationComponent } from './screens/registration/registration.component';
-import {FormsModule} from '@angular/forms';
+import {ReactiveFormsModule} from '@angular/forms';
 
 
 @NgModule({
@@ -40,7 +40,7 @@ import {FormsModule} from '@angular/forms';
     MatSidenavModule,
     MatButtonModule,
     MatToolbarModule,
-    FormsModule,
+    ReactiveFormsModule,
     MatFormFieldModule,
     MatInputModule,
     NgbTypeaheadModule
