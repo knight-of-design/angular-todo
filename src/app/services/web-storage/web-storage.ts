@@ -74,7 +74,7 @@ class StorageRetrieval {
 
 
 class StoragePersistence {
-  private resultData: string;
+  private resultData: any;
 
   constructor(private key: string,
               private operations: StorageOperations) {
@@ -90,12 +90,16 @@ class StoragePersistence {
     return this;
   }
 
-  value(value: string) {
+  value(value: any) {
     this.resultData = value;
     return this;
   }
 
   result() {
+    this.resultData = (typeof this.resultData === 'string')
+      ? this.resultData
+      : this.resultData.toString();
+
     this.operations.set(this.key, this.resultData);
     return this.resultData;
   }
