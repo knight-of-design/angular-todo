@@ -14,6 +14,8 @@ export class RegistrationService {
   constructor(private webStorage: WebStorageService) { }
 
   register(userDetails: UserRegistrationDetails) {
+    this.webStorage.local.clear();
+
     this.webStorage.local
       .set('user')
       .value({
@@ -22,10 +24,15 @@ export class RegistrationService {
       })
       .format(JSON).result();
 
+    const token = this.createHashToken(userDetails.password);
     this.webStorage.local
       .set('token')
-      .value(userDetails.password)
-      .format((x: string) => this.createHashToken(x))
+      .value(token)
+      .result();
+
+    this.webStorage.local
+      .set('login-token')
+      .value(token)
       .result();
 
   }

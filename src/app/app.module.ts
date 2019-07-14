@@ -23,13 +23,15 @@ import { LandingPageComponent } from './screens/landing-page/landing-page.compon
 import {NgbTypeaheadModule} from '@ng-bootstrap/ng-bootstrap';
 import { RegistrationComponent } from './screens/registration/registration.component';
 import {ReactiveFormsModule} from '@angular/forms';
+import { TodoListComponent } from './screens/todo-list/todo-list.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     LandingPageComponent,
-    RegistrationComponent
+    RegistrationComponent,
+    TodoListComponent
   ],
   imports: [
     BrowserModule,

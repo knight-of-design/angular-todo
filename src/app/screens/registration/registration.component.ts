@@ -26,6 +26,6 @@ export class RegistrationComponent implements OnInit {
 
   submitForm() {
     this.registrationService.register(this.registrationForm.value);
-    this.router.navigateByUrl('');
+    this.router.navigateByUrl('todo-list');
   }
 }
