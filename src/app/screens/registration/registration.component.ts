@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {FormControl, FormGroup} from '@angular/forms';
+import {RegistrationService} from '../../services/registration.service';
 
 @Component({
   selector: 'app-registration',
@@ -10,7 +11,7 @@ export class RegistrationComponent implements OnInit {
 
   registrationForm: FormGroup;
 
-  constructor() { }
+  constructor(registrationService: RegistrationService) { }
 
   ngOnInit() {
     this.registrationForm = new FormGroup({

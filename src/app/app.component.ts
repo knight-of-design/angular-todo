@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {WebStorageService} from './services/web-storage/web-storage.service';
 
 @Component({
   selector: 'app-root',
