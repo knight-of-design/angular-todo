@@ -1,4 +1,4 @@
-import {JsonSerialization} from '../serialization/json';
+import {JsonSerialization} from './serialization/json';
 
 
 export interface StorageOperations {

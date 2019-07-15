@@ -1,4 +1,14 @@
+<form [formGroup]="todoForm" class="todo-form" (submit)="addTodo($event)">
 
-<ul>
-  <li>Do laundry</li>
-</ul>
+  <h2>Hi {{user}}</h2>
+
+  <div class="form-group">
+    <input placeholder="What needs to be done" aria-label="What needs to be done" class="form-control" type="text"
+           formControlName="action">
+  </div>
+
+  <ol class="todo-list">
+    <li *ngFor="let todo of todos" class="todo-item">{{todo.action}}</li>
+  </ol>
+
+</form>

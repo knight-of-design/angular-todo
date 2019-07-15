@@ -6,6 +6,7 @@ export class JsonSerialization {
     } catch (e) {
       result = null;
     }
+    return result;
   }
 
   static format(value: any) {
