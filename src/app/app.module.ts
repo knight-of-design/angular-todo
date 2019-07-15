@@ -22,7 +22,7 @@ import { AppComponent } from './app.component';
 import { LandingPageComponent } from './screens/landing-page/landing-page.component';
 import {NgbTypeaheadModule} from '@ng-bootstrap/ng-bootstrap';
 import { RegistrationComponent } from './screens/registration/registration.component';
-import {ReactiveFormsModule} from '@angular/forms';
+import {ControlContainer, ReactiveFormsModule} from '@angular/forms';
 import { TodoListComponent } from './screens/todo-list/todo-list.component';
 
 
@@ -31,7 +31,7 @@ import { TodoListComponent } from './screens/todo-list/todo-list.component';
     AppComponent,
     LandingPageComponent,
     RegistrationComponent,
-    TodoListComponent
+    TodoListComponent,
   ],
   imports: [
     BrowserModule,

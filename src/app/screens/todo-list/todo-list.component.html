@@ -7,8 +7,19 @@
            formControlName="action">
   </div>
 
-  <ol class="todo-list">
-    <li *ngFor="let todo of todos" class="todo-item">{{todo.action}}</li>
-  </ol>
 
+</form>
+
+
+<form [formGroup]="todoListForm">
+
+
+<ol class="todo-list" formArrayName="todos">
+  <li *ngFor="let todo of todos; let i = index" class="todo-item" [formGroupName]="i">
+
+      <input class="action form-control" [value]="todo.action" (keydown)="save()" formControlName="action">
+      <input class="done" type="checkbox" value="true" [checked]="todo.isDone" (change)="save()" formControlName="isDone">
+
+  </li>
+</ol>
 </form>

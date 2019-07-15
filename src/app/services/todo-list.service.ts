@@ -1,13 +1,6 @@
 import { Injectable } from '@angular/core';
 import {WebStorageService} from './web-storage/web-storage.service';
-
-export interface Todo {
-  action: string;
-  isDone?: boolean;
-  effort?: number;
-  cost?: number;
-  importance?: number;
-}
+import {Todo} from '../models/todo.model';
 
 @Injectable({
   providedIn: 'root'
