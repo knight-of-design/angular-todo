@@ -31,7 +31,7 @@ export class TodoListComponent implements OnInit {
     this.todoListForm = this.fb.group({
       todos: this.fb.array(this.todos.map(todo => this.fb.group({
         action: new FormControl(todo.action),
-        isDone: new FormControl(todo.isDone || false)})))
+        isDone: new FormControl(todo.progress && todo.progress > 0 )})))
     });
   }
 
