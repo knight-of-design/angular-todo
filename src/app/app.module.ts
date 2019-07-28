@@ -24,6 +24,7 @@ import {NgbTypeaheadModule} from '@ng-bootstrap/ng-bootstrap';
 import { RegistrationComponent } from './screens/registration/registration.component';
 import {ControlContainer, ReactiveFormsModule} from '@angular/forms';
 import { TodoListComponent } from './screens/todo-list/todo-list.component';
+import { TodoKanbanComponent } from './screens/todo-kanban/todo-kanban.component';
 
 
 @NgModule({
@@ -32,6 +33,7 @@ import { TodoListComponent } from './screens/todo-list/todo-list.component';
     LandingPageComponent,
     RegistrationComponent,
     TodoListComponent,
+    TodoKanbanComponent,
   ],
   imports: [
     BrowserModule,

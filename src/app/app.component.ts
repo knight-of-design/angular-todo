@@ -11,11 +11,7 @@ export class AppComponent {
   title = 'Angular Todo App';
   authenticated = false;
 
-  constructor(private authenticationService: AuthenticationService,
-              private router: Router) {
+  constructor(private authenticationService: AuthenticationService) {
     this.authenticated = authenticationService.isAuthenticated();
-    if (this.authenticated) {
-      router.navigateByUrl('todo-list');
-    }
   }
 }

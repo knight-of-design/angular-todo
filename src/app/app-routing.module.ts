@@ -4,10 +4,12 @@ import {LandingPageComponent} from './screens/landing-page/landing-page.componen
 import {RegistrationComponent} from './screens/registration/registration.component';
 import {TodoListComponent} from './screens/todo-list/todo-list.component';
 import {AuthenticationGuard} from './guards/authentication.guard';
+import {TodoKanbanComponent} from './screens/todo-kanban/todo-kanban.component';
 
 
 const routes: Routes = [
-  { path: 'todo-list', component: TodoListComponent, canActivate: [AuthenticationGuard] },
+  { path: 'checklist', component: TodoListComponent, canActivate: [AuthenticationGuard] },
+  { path: 'kanban', component: TodoKanbanComponent, canActivate: [AuthenticationGuard] },
   { path: '', component: LandingPageComponent },
   { path: 'register', component: RegistrationComponent},
   { path: '**', component: LandingPageComponent }
