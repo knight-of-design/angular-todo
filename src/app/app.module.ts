@@ -25,6 +25,8 @@ import { RegistrationComponent } from './screens/registration/registration.compo
 import {ControlContainer, ReactiveFormsModule} from '@angular/forms';
 import { TodoListComponent } from './screens/todo-list/todo-list.component';
 import { TodoKanbanComponent } from './screens/todo-kanban/todo-kanban.component';
+import { TodoListState } from './store/todos.state';
+import { NgxsModule } from '@ngxs/store';
 
 
 @NgModule({
@@ -47,7 +49,10 @@ import { TodoKanbanComponent } from './screens/todo-kanban/todo-kanban.component
     ReactiveFormsModule,
     MatFormFieldModule,
     MatInputModule,
-    NgbTypeaheadModule
+    NgbTypeaheadModule,
+    NgxsModule.forRoot([
+      TodoListState
+    ])
   ],
   providers: [],
   bootstrap: [AppComponent]

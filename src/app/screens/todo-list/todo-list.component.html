@@ -13,12 +13,11 @@
 
 <form [formGroup]="todoListForm">
 
-
 <ol class="todo-list" formArrayName="todos">
-  <li *ngFor="let todo of todos; let i = index" class="todo-item" [formGroupName]="i">
+  <li *ngFor="let todo of (todos$ | async); let i = index" class="todo-item" [formGroupName]="i.toString()">
 
       <input class="action form-control" [value]="todo.action" (keydown)="save()" formControlName="action">
-      <input class="done" type="checkbox" value="true" [checked]="todo.isDone" (change)="save()" formControlName="isDone">
+      <input class="done" type="checkbox" value="true" [checked]="todo.progress > 0" (change)="save()" formControlName="isDone">
 
   </li>
 </ol>
