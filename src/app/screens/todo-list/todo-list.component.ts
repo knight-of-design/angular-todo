@@ -41,9 +41,11 @@ export class TodoListComponent implements OnInit {
 
   addTodo(e) {
     e.preventDefault();
-    this.todoListService.addTodo({action: this.todoForm.value.action});
-    this.save();
-    this.todoForm.reset();
+    this.todoListService.addTodo({action: this.todoForm.value.action}).subscribe(() => {
+      this.save();
+      this.todoForm.reset();
+    });
+
   }
 
   save() {

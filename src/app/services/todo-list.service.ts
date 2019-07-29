@@ -18,8 +18,8 @@ export class TodoListService {
     this.loadTodoList();
   }
 
-  addTodo(todo: Todo) {
-    this.store.dispatch(new TodoAction.Add(todo));
+  addTodo(todo: Todo): Observable<any> {
+    return this.store.dispatch(new TodoAction.Add(todo));
   }
 
   loadTodoList() {
@@ -33,6 +33,7 @@ export class TodoListService {
 
   saveTodoList(todos: Todo[]) {
     this.webStorage.local.set('todo-list').value(todos).format(JSON).result();
+    this.store.dispatch(new TodoAction.Load(todos));
   }
 }
 

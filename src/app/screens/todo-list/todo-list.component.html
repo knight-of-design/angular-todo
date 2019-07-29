@@ -3,8 +3,13 @@
   <h2>Hi {{user}}</h2>
 
   <div class="form-group">
-    <input placeholder="What needs to be done" aria-label="What needs to be done" class="form-control" type="text"
-           formControlName="action">
+    <input class="form-control"
+           type="text"
+           placeholder="What needs to be done"
+           aria-label="New todo name"
+           formControlName="action"
+           ngxsForm="todoCreator.action"
+    >
   </div>
 
 
