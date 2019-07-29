@@ -25,9 +25,12 @@
     "@mdi/angular-material": "^3.7.95",
     "@mdi/svg": "^3.7.95",
     "@ng-bootstrap/ng-bootstrap": "^5.0.0",
+    "@ngxs/store": "^3.5.0",
     "bootstrap": "^4.3.1",
     "hammerjs": "^2.0.8",
+    "jquery": "3",
     "material-design-icons": "^3.0.1",
+    "popper.js": "^1.14.7",
     "rxjs": "~6.4.0",
     "tslib": "^1.9.0",
     "zone.js": "~0.9.1"
