@@ -27,6 +27,7 @@ import { TodoListComponent } from './screens/todo-list/todo-list.component';
 import { TodoKanbanComponent } from './screens/todo-kanban/todo-kanban.component';
 import { TodoListState } from './store/todos.state';
 import { NgxsModule } from '@ngxs/store';
+import { NgxsFormPluginModule } from '@ngxs/form-plugin';
 
 
 @NgModule({
@@ -52,7 +53,8 @@ import { NgxsModule } from '@ngxs/store';
     NgbTypeaheadModule,
     NgxsModule.forRoot([
       TodoListState
-    ])
+    ]),
+    NgxsFormPluginModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
