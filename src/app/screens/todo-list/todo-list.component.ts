@@ -44,7 +44,6 @@ export class TodoListComponent implements OnInit {
     this.todoListService.addTodo({action: this.todoForm.value.action});
     this.save();
     this.todoForm.reset();
-    return false;
   }
 
   save() {
