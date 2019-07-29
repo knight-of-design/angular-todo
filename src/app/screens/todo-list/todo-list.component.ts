@@ -13,7 +13,6 @@ import { Observable } from 'rxjs';
 })
 export class TodoListComponent implements OnInit {
 
-  private todos: Todo[];
   private todos$: Observable<Todo[]> = this.todoListService.todos$;
   private todoForm: FormGroup;
   private todoListForm: FormGroup;
@@ -39,8 +38,8 @@ export class TodoListComponent implements OnInit {
     });
   }
 
-  addTodo(e) {
-    e.preventDefault();
+  addTodo(event: Event) {
+    event.preventDefault();
     this.todoListService.addTodo({action: this.todoForm.value.action}).subscribe(() => {
       this.save();
       this.todoForm.reset();

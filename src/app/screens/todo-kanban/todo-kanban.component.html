@@ -1,3 +1,18 @@
+<div class="primary-area">
+<form [formGroup]="todoForm" class="todo-form" (submit)="addTodo($event)">
+
+  <h2>Hi!</h2>
+
+  <div class="form-group">
+    <input class="form-control"
+           type="text"
+           placeholder="What needs to be done"
+           aria-label="New todo name"
+           formControlName="action"
+           ngxsForm="todoCreator.action"
+    >
+  </div>
+</form>
 <div class="kanban-area">
   <section>
 <h2>To Begin</h2>
@@ -12,6 +27,7 @@
 <h2>Finished</h2>
 <ul></ul>
   </section>
+</div>
 </div>
 <div class="detail-area">
   <h2>Todo Details</h2>

@@ -1,9 +1,23 @@
 :host
   display: flex
 
-.kanban-area
+
+.primary-area
   display: flex
   flex: 3
+  flex-direction: column
+  padding: 64px 16px
+
+  .todo-form
+    width: 100%
+    max-width: 560px
+    margin: auto
+
+
+.kanban-area
+  display: flex
+  flex: 1
+  margin-top: 16px
 
   section
     flex: 1
@@ -12,3 +26,4 @@
 .detail-area
   display: flex
   flex: 1
+  padding-top: 32px
