@@ -1,33 +1,51 @@
 <div class="primary-area">
-<form [formGroup]="todoForm" class="todo-form" (submit)="addTodo($event)">
+  <form [formGroup]="todoForm" class="todo-form" (submit)="addTodo($event)">
 
-  <h2>Hi!</h2>
+    <h2>Hi!</h2>
 
-  <div class="form-group">
-    <input class="form-control"
-           type="text"
-           placeholder="What needs to be done"
-           aria-label="New todo name"
-           formControlName="action"
-           ngxsForm="todoCreator.action"
-    >
+    <div class="form-group">
+      <input class="form-control"
+             type="text"
+             placeholder="What needs to be done"
+             aria-label="New todo name"
+             formControlName="action"
+             ngxsForm="todoCreator.action"
+      >
+    </div>
+  </form>
+  <div class="kanban-area">
+    <section>
+      <form [formGroup]="todosForm">
+        <h2>To Begin</h2>
+        <ol class="todo-list">
+          <li *ngFor="let todo of (todosToBegin$ | async); let i = index" class="todo-item">
+            <app-todo-kanban-item [todo]="todo" [form]="todosToBeginForms[i]"></app-todo-kanban-item>
+          </li>
+        </ol>
+      </form>
+    </section>
+    <section>
+      <form [formGroup]="todosForm">
+      <h2>In Progress</h2>
+      <ol class="todo-list">
+        <li *ngFor="let todo of (todosInProgress$ | async); let i = index" class="todo-item">
+          <app-todo-kanban-item [todo]="todo" [form]="todosInProgressForms[i]"></app-todo-kanban-item>
+        </li>
+      </ol>
+      </form>
+    </section>
+
+    <section>
+      <form [formGroup]="todosForm">
+      <h2>Finished</h2>
+      <ol class="todo-list">
+        <li *ngFor="let todo of (todosFinished$ | async); let i = index" class="todo-item">
+          <app-todo-kanban-item [todo]="todo" [form]="todosFinishedForms[i]"></app-todo-kanban-item>
+        </li>
+      </ol>
+      </form>
+    </section>
   </div>
-</form>
-<div class="kanban-area">
-  <section>
-<h2>To Begin</h2>
-<ul></ul>
-  </section>
-  <section>
-<h2>In Progress</h2>
-<ul></ul>
-  </section>
-
-  <section>
-<h2>Finished</h2>
-<ul></ul>
-  </section>
-</div>
 </div>
 <div class="detail-area">
   <h2>Todo Details</h2>

@@ -28,6 +28,7 @@ import { TodoKanbanComponent } from './screens/todo-kanban/todo-kanban.component
 import { TodoListState } from './store/todos.state';
 import { NgxsModule } from '@ngxs/store';
 import { NgxsFormPluginModule } from '@ngxs/form-plugin';
+import { TodoKanbanItemComponent } from './screens/todo-kanban-item/todo-kanban-item.component';
 
 
 @NgModule({
@@ -37,6 +38,7 @@ import { NgxsFormPluginModule } from '@ngxs/form-plugin';
     RegistrationComponent,
     TodoListComponent,
     TodoKanbanComponent,
+    TodoKanbanItemComponent,
   ],
   imports: [
     BrowserModule,

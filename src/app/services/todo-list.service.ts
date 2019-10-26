@@ -12,6 +12,9 @@ import { TodoAction } from '../store/todo.actions';
 export class TodoListService {
 
   @Select(TodoListState) todos$: Observable<Todo[]>;
+  @Select(TodoListState.getTodosToBegin) todosToBegin$: Observable<Todo[]>;
+  @Select(TodoListState.getTodosInProgress) todosInProgress$: Observable<Todo[]>;
+  @Select(TodoListState.getTodosBeenFinished) todosBeenFinished$: Observable<Todo[]>;
 
   constructor(private webStorage: WebStorageService,
               private store: Store) {
