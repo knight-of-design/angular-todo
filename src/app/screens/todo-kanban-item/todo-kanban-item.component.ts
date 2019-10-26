@@ -2,8 +2,6 @@ import { Component, Input, OnInit } from '@angular/core';
 import { Todo } from '../../models/todo.model';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import truly from '@truly.js/awesomeness';
-import '@truly.js/awesomeness/built/boolean-awesomeness/defined';
-import '@truly.js/awesomeness/built/boolean-awesomeness/and';
 
 
 @Component({

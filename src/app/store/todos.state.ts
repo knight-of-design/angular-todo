@@ -2,8 +2,6 @@ import { Action, Selector, State, StateContext } from '@ngxs/store';
 import { Todo } from '../models/todo.model';
 import { TodoAction } from './todo.actions';
 import truly from '@truly.js/awesomeness';
-import '@truly.js/awesomeness/built/boolean-awesomeness/and';
-import '@truly.js/awesomeness/built/boolean-awesomeness/is';
 
 @State<Todo[]>({
   name: 'todoList',
