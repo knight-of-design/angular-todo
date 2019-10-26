@@ -1,6 +1,10 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Todo } from '../../models/todo.model';
 import { FormBuilder, FormGroup } from '@angular/forms';
+import truly from '@truly.js/awesomeness';
+import '@truly.js/awesomeness/built/boolean-awesomeness/defined';
+import '@truly.js/awesomeness/built/boolean-awesomeness/and';
+
 
 @Component({
   selector: 'app-todo-kanban-item',
@@ -13,6 +17,12 @@ export class TodoKanbanItemComponent implements OnInit {
   public todo: Todo;
   @Input()
   public form: FormGroup;
+
+  private showProgress = truly
+    .defined(this.todo)
+    .and(this.todo.progress > 0)
+    .and(this.todo.progress < 100)
+    .then(true);
 
   constructor(private fb: FormBuilder) {
   }

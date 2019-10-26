@@ -1,6 +1,6 @@
 <div [formGroup]="form">
   <input class="action form-control" formControlName="action" [value]="todo.action" />
-  <span *ngIf="todo.progress > 0 && todo.progress < 100">
+  <span *ngIf="showProgress">
     {{todo.progress}}
   </span>
 </div>

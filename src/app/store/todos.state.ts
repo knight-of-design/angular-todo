@@ -1,6 +1,9 @@
 import { Action, Selector, State, StateContext } from '@ngxs/store';
 import { Todo } from '../models/todo.model';
 import { TodoAction } from './todo.actions';
+import truly from '@truly.js/awesomeness';
+import '@truly.js/awesomeness/built/boolean-awesomeness/and';
+import '@truly.js/awesomeness/built/boolean-awesomeness/is';
 
 @State<Todo[]>({
   name: 'todoList',
@@ -9,17 +12,17 @@ import { TodoAction } from './todo.actions';
 export class TodoListState {
   @Selector()
   static getTodosToBegin(state: Todo[]) {
-    return state.filter(t => t.progress === 0);
+    return state.filter(t => truly(t.progress).is(0).then(true));
   }
 
   @Selector()
   static getTodosInProgress(state: Todo[]) {
-    return state.filter(t => t.progress > 0 && t.progress < 100);
+    return state.filter(todo => truly(todo.progress > 0).and(todo.progress < 100).then(true));
   }
 
   @Selector()
   static getTodosBeenFinished(state: Todo[]) {
-    return state.filter(t => t.progress === 100);
+    return state.filter(t => truly(t.progress).is(100).then(true));
   }
 
   @Action(TodoAction.Add)
